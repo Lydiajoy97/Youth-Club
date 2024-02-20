@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3j+bg*g_j%fvi5+4_ht50z%4=li_sx-m%9$gb@oz#enawha)x='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpod.io',
 '.herokuapp.com',]
@@ -91,6 +91,10 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "",
+    "https://youth-club-b2219f74ddfa.herokuapp.com/"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
