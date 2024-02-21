@@ -15,3 +15,4 @@ def upload_file(request):
     else:
         form = ModelFormWithFileField()
     return render(request, "index.html", {"form": form})
+
