@@ -1,20 +1,18 @@
+from django.http import HttpResponse
 from django.shortcuts import render
-from django.http import HttpResponse 
-from .form import UploadFileForm
-from .models import ModelWithFileField
+from .form import ModelFormWithFileField
 
 
-# from Django website
-    
+def home(request):
+    return render(request, 'index.html')
 
 def upload_file(request):
-    template_name = "registration//index.html"
     if request.method == "POST":
         form = ModelFormWithFileField(request.POST, request.FILES)
         if form.is_valid():
-             file is saved
-             form.save()
-             return HttpResponse("Thank you for uploading your form. We will be in contact soon!")
+            file is saved
+            form.save()
+            return HttpResponse("Thanks for uploading your consent form! We will be in touch soon")
     else:
         form = ModelFormWithFileField()
-    return render(request, "upload.html", {"form": form})
+    return render(request, "index.html", {"form": form})
