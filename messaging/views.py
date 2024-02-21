@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Message
-from .models import Form
 
 # https://ordinarycoders.com/blog/article/django-messages-framework
 # Create your views here.
-def Form(request):
+def Contactform(request):
   if request.method == 'POST':
     form = ContactForm(request.POST)
     if form.is_valid():

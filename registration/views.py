@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .form import ModelFormWithFileField
 
 
 def home(request):
