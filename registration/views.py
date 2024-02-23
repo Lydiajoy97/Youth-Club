@@ -5,7 +5,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-def upload_form(request):
+def form(request):
     if request.method == "POST":
         form = ModelFormWithFileField(request.POST, request.FILES)
         if form.is_valid():
