@@ -23,6 +23,8 @@ This is a website where parents or guardians can register there child to the you
 Project outcomes:
 
 # User Stories
+1. As a user I would like to find out more about the youth club and register my child. 
+
 
 
 # Features
@@ -45,14 +47,12 @@ Delete- To be able to unsend your message.
 
 # Structure
 
-
 # Design and Color scheme
 
 # Frame works and Libraries
 
 # Testing
 Strategy:
-
 
 # Summary
 
