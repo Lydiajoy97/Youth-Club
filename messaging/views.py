@@ -22,8 +22,8 @@ def Contactform(request):
       except BadHeaderError:
         return HttpResponse('Invalid header found.')
       messages.success(request, "Message sent." )
-      return redirect ("main:homepage")
-    messages.error(request, "Error. Message not sent.")
+      return redirect ("main:home")
+      messages.error(request, "Error. Message not sent.")
 
-    form = ContactForm()
-    return render(request, "main/contact.html", {'form':form})
+      return render(
+        request, "messages.html", {"messages": messages},)
