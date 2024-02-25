@@ -90,6 +90,18 @@ https://github.com/summernote/django-summernote
 
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models 
 
+https://stackoverflow.com/questions/9051551/is-it-possible-to-return-an-httpresponse-in-django-with-text-a-json-object 
+
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models 
+
+https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/ 
+
+https://stackoverflow.com/questions/1926049/django-templatedoesnotexist 
+
+https://stackoverflow.com/questions/26258905/the-view-didnt-return-an-httpresponse-object-it-returned-none-instead 
+
+https://stackoverflow.com/questions/3038459/what-is-the-path-that-django-uses-for-locating-and-loading-templates
+
 # Contents
 Chat GBT was used to right the contents on the home page. 
 
