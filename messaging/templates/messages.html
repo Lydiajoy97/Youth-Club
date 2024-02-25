@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 <!-- From https://ordinarycoders.com/blog/article/django-messages-framework-->
 {% if messages %} 
 <ul class="messages">
@@ -6,3 +9,4 @@
     {% endfor %}
 </ul>
 {% endif %}
+{% endblock content %}

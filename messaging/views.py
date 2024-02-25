@@ -26,4 +26,7 @@ def Contactform(request):
       messages.error(request, "Error. Message not sent.")
 
       return render(
-        request, "messages.html", {"messages": messages},)
+        request,
+        "messaging/messages.html",
+        {"message": amessage},
+    )
