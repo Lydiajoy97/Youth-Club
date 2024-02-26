@@ -29,7 +29,7 @@ if os.path.isfile('env.py'):
 SECRET_KEY = 'django-insecure-3j+bg*g_j%fvi5+4_ht50z%4=li_sx-m%9$gb@oz#enawha)x='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpod.io',
 '.herokuapp.com',]
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'form'
 LOGOUT_REDIRECT_URL = '/'
 
 
