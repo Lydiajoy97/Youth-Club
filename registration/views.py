@@ -9,11 +9,5 @@ def home(request):
 
 def form(request):
     User._meta.get_fields()
-    if request.method == "POST":
-        if form.is_valid():
-            file is saved
-            form.save()
-            return HttpResponse("Thanks for uploading your consent form! We will be in touch soon")
-    else:
-        return render(request, "index.html")
+    return render(request, 'form.html')
 
