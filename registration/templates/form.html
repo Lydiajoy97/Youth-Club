@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 {% if user.is_authenticated %}
-<p class="text-end m-3">You are logged in as {{ user }}</p>
+<p class="text-end m-3">You are logged in as {{ user }}{{ form }}</p>
 {% else %}
 <p class="text-end m-3">You are not logged in</p>
 {% endif %}
-<form method="POST" action="{% url 'form' %}">
-        {{ obj.form }}
+
         <button>Submit</button>
     </form>
 

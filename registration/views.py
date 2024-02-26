@@ -8,6 +8,5 @@ def home(request):
     return render(request, 'index.html')
 
 def form(request):
-    User._meta.get_fields()
     return render(request, 'form.html')
 
