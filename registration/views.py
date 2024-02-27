@@ -8,7 +8,8 @@ def home(request):
     return render(request, 'index.html')
 
 def form_upload(request):
-
+# help from https://stackoverflow.com/questions/3106295/django-get-list-of-model-fields
+# help from https://docs.djangoproject.com/en/5.0/ref/models/meta/
     if request.method=="POST":
        form = form._meta.get_fields()
        if form.is_valid(): 

@@ -7,10 +7,8 @@ Live depolyed site:
 * [**Project Brief**](#Project-Brief)
 * [**User Experience** ](#User-experience)
 * [**User Stories**](#User-Stories)
-* [**Wireframes** ](#Wireframes)
 * [**Surface-plan**](#Surface-plan)
 * [**Features** ](#Features)
-* [**Frameworks and libraries**](#Framewores-and-Liberies)
 * [ **Testing**](#Testing)
 * [ **Deployment**](#Deployment)
 * [**Credits** ](#Credits)
@@ -19,13 +17,10 @@ Live depolyed site:
 # Project Brief
 This is a website where parents or guardians can register there child to the youth club or make enquires using the webistes messaging service.
 
-# User Experience
-Project outcomes:
-
 # User Stories
 1. As a user I would like to find out more about the youth club and register my child. 
-
-
+2. As a user I want to be able to upload and delete form information to register my child to the youth group. 
+3. As an administrator I want to be able to manage users.
 
 # Features
 Each custom model should have the CRUD functionality. I have detailed each models functionality below.
@@ -35,21 +30,12 @@ Read- To be able to see your information uploaded once you have logged in. This 
 Update- To be able to update your information were applicable.
 Delete- To be able to delete any information that no longer applies to your child or their application.
 
-2. CRUD Functionality of the messaging model:
-Create- To be able to type out a message.
-Read- To be able to read your sent message.
-Update- To be able to edit your message once it has been sent. 
-Delete- To be able to unsend your message.
-
-3. Other features:
+2. Other features:
 - A log in page for users so that their information is secure.
 - Navagation links to each page for best user experience.
 
-# Structure
+# surface plan
 
-# Design and Color scheme
-
-# Frame works and Libraries
 
 # Testing
 Strategy:
@@ -58,7 +44,10 @@ Strategy:
 
 
 # Testing Results
+One error that I ran into was during migrations. I wanted to update my model after an inital migration. To fix this I had to delete the migration files and run migrations again.
 
+Another error that I found was getting the form model to display on the html page. 
+Another error that I ran into whilst trying to solve this one was an attritute error. Both remain unfixed. 
 
 # Credits
 
@@ -101,6 +90,16 @@ https://stackoverflow.com/questions/1926049/django-templatedoesnotexist
 https://stackoverflow.com/questions/26258905/the-view-didnt-return-an-httpresponse-object-it-returned-none-instead 
 
 https://stackoverflow.com/questions/3038459/what-is-the-path-that-django-uses-for-locating-and-loading-templates
+
+https://docs.djangoproject.com/en/dev/topics/templates/#django.template.backends.base.Template.render
+
+https://stackoverflow.com/questions/3106295/django-get-list-of-model-fields 
+
+https://stackoverflow.com/questions/4870619/django-after-login-redirect-user-to-his-custom-page-mysite-com-username
+
+https://stackoverflow.com/questions/3289860/how-can-i-embed-django-csrf-token-straight-into-html 
+
+
 
 # Contents
 Chat GBT was used to right the contents on the home page. 
