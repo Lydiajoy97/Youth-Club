@@ -4,14 +4,14 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Youth Club</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<link rel="stylesheet" href="{% static 'css/base.css' %}" />
 <!--Bootstrap CSS-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -22,7 +22,7 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
   <header>
     <!--Bootstrap navbar-->
     <!--navbar from the code insitute walkthrough-->
-    <nav class="navbar" style="background-color: #000000;">
+    <nav class="navbar" style="background-color: #456154;">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand"
