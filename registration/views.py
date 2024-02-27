@@ -2,22 +2,17 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import form
 from django.contrib.auth.models import User
-
+from django.views.generic.list import ListView
 
 def home(request):
     return render(request, 'index.html')
 
-def formupload(request):
+class formlist(ListView):
 # help from https://stackoverflow.com/questions/3106295/django-get-list-of-model-fields
 # help from https://docs.djangoproject.com/en/5.0/ref/models/meta/
-    if request.method=="POST":
-       form = form._meta.get_fields()
-       if form.is_valid(): 
-            form.save()           
-            return HttpResponse("Thanks for uploading your form! We will be in touch soon.")
+    model = form
+    fields = ['all']
 
-       else: 
-            form = formupload()
-
-    return render(request,'form.html')
+def form(request):
+    return render(request, 'form.html')
 
