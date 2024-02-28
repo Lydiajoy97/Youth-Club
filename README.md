@@ -1,6 +1,6 @@
 ## Project Name : The Youth Hub
 
-Live depolyed site: 
+Live depolyed site: https://8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpod.io/
 
 # **TABLE OF Contents**
 
@@ -34,8 +34,10 @@ Delete- To be able to delete any information that no longer applies to your chil
 - A log in page for users so that their information is secure.
 - Navagation links to each page for best user experience.
 
-# Surface plan
+![responsive](static/images/site.png)
 
+# Surface Plan
+![responsive](static/images/plan.png)
 
 # Testing
 To test my project I will try and create an account and register a child using the form upload page. 
@@ -48,10 +50,15 @@ One error that I ran into was during migrations. I wanted to update my model aft
 
 Another error that I found was getting the form model to display on the html page. 
 Another error that I ran into whilst trying to solve this one was an attritute error. After following the paths I realised the attribute error came from the URL path. Once I changed this to match the view name it was fixed. 
+I also realised that my form was still not being displayed. This was because I was trying to pull the models as a list from the database instead of creating a form. To fix this I created a form.py file and created the class based view to pull that. My form now displays correctly and users can submit. 
+
+When trying to add the Edit and Delete fuctionalities I ran into errors. I started by following the tutorials credited, but then my url path broke. This remains un-fixed and I have been unsucessful in creating a site with full CRUD funtionalities. 
 
 # Testing Results
 
 To veiw my testing table please follow this link. 
+
+https://docs.google.com/document/d/1mBo_uNo2pwG0C7uNdOIpEvz9kHZVioFogS3kHh2kR0U/edit?usp=sharing
 
 # Credits
 
@@ -115,6 +122,29 @@ csrf token:
 
 https://stackoverflow.com/questions/3289860/how-can-i-embed-django-csrf-token-straight-into-html 
 
+form:
+https://www.geeksforgeeks.org/how-to-create-a-form-using-django-forms/?ref=next_article 
+
+https://www.youtube.com/watch?v=EX6Tt-ZW0so 
+
+https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/ 
+
+https://stackoverflow.com/questions/69413424/django-attributeerror-wsgirequest-object-has-no-attribute-get 
+
+https://www.pythontutorial.net/django-tutorial/django-delete-form/ 
+
+https://docs.djangoproject.com/en/5.0/topics/forms/formsets/#dealing-with-ordering-and-deletion-of-forms 
+
+Other websites:
+
+https://docs.djangoproject.com/en/5.0/ref/contrib/admin/
+
+https://stackoverflow.com/questions/34217400/function-object-has-no-attribute-as-view
+
+https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/
+
+https://www.youtube.com/watch?v=4vi42R4B-OQ 
+
 
 # Contents
 Chat GBT was used to right the contents on the home page. 
@@ -122,7 +152,8 @@ Chat GBT was used to right the contents on the home page.
 The hero image is my own image taken at a previous workplace.
 
 # Deployment
-
+To deploy to heroku I set up the app on the dashboard. 
+I then clicked deploy to the main branch and opened the app.
 
 # Acknowledgemnts
 
