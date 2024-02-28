@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import form
+from .models import UploadForm
 
 # Register your models here.
-admin.site.register(form)
+@admin.register(UploadForm)
+class UploadFormAdmin(admin.ModelAdmin):
+    pass 
