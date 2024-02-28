@@ -41,6 +41,7 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
                   </li>
                   {% if user.is_authenticated %}
 <li class="nav-item">
+  <!-- Log in and out from walkthrough-->
 	<a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
 </li>
 {% else %}

@@ -157,3 +157,4 @@ I then clicked deploy to the main branch and opened the app.
 
 # Acknowledgemnts
 
+Huge thank you to my mentor for your help and encouragement! 
