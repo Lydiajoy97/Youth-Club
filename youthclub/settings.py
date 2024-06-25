@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'youthclub',
     'registration', 
     'about',
+    'activites',
 ]
 
 
