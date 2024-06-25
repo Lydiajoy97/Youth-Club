@@ -5,9 +5,9 @@ from django.contrib.auth.models import User
 STATUS = ((0, "Draft"), (1, "Published"))
 # checkbox field source in credits
 # Create your models here.
-class ActivityFrom(models.Model):
+class ActivityForm(models.Model):
     first_name = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="form_upload")
+        User, on_delete=models.CASCADE, related_name="activity_form")
     email = models.EmailField(max_length=254)
     game_ideas = models.CharField(max_length=700, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)

@@ -118,7 +118,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpod.io",
+    "https://8000-lydiajoy97-youthclub-md5pq2f0pe8.ws.codeinstitute-ide.net",
     "https://youth-club-b2219f74ddfa.herokuapp.com/"
 ]
 

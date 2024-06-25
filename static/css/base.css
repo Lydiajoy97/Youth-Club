@@ -5,3 +5,9 @@ p {
 .nav-item {
     background-color: rgb(50, 151, 111) ;
 }
+
+.page-footer {
+    position: absolute;
+    bottom: 0 !important;
+    width: 100%;
+}
