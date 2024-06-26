@@ -1,14 +1,7 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import ActivityForm
 
-# Create your views here.
-def activites(request):
-    """
-    Renders the activty page
-    """
-    activites = activites.objects.all()
-
-    return render(
-        request,
-        "activites.html",
-        {"activites": activites},
-    )
+class ActivityFormList(generic.ListView):
+    queryset = ActivityForm.objects.all()
+    template_name = "activites.html"
