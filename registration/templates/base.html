@@ -39,6 +39,13 @@ integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2
                       href="{% url 'about' %}"
                       >About</a>
                   </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="{% url 'activites' %}"
+                      >Activites</a>
+                  </li>
                   {% if user.is_authenticated %}
 <li class="nav-item">
   <!-- Log in and out from walkthrough-->
