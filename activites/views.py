@@ -5,7 +5,7 @@ def activites(request):
     """
     Renders the activty page
     """
-    activites = activites.objects.all().order_by('-updated_on').first()
+    activites = activites.objects.all()
 
     return render(
         request,
