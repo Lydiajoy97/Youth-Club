@@ -1,0 +1,13 @@
+
+footer {
+    position: absolute;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+body {
+    background-color: #b3bed3;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
