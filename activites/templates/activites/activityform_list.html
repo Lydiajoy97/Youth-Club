@@ -3,12 +3,14 @@
 {% block content %}
 
 <body>
+    <h1> Your ideas...</h1>
     {% for activityform in activityform_list %}
     <div class="container mt-5">
         <div class="row">
             <div>
-                <h1> Your ideas...</h1>
-                {{ activityform.game_ideas }}
+                <span class="activityform-comment">{{ activityform.name }} </span><br>
+                <span class="activityform-comment">{{ activityform.created_on }} </span><br>
+                <span class="activityform-comment">{{ activityform.game_ideas }}</span>
             </div>
         </div>
     </div>
