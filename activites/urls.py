@@ -3,6 +3,6 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', views.ActivityFormList.as_view(), name="activites"),
-    path('', views.get_activity, name= "activites"),
+    path('', views.ActivityFormList.as_view(), name='activityform'),
+    path('<slug:slug>/', views.activites_detail, name="activityform_detail"),
 ]

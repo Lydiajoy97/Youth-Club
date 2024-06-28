@@ -3,15 +3,16 @@
 {% block content %}
 
 <body>
+    {% for activityform in activityform_list %}
     <div class="container mt-5">
         <div class="row">
             <div>
-                <h1> Your Ideas! </h1>
-                {{ ActivityForm.game_ideas | safe }} 
+                <h1> Your ideas...</h1>
+                {{ activityform.game_ideas }}
             </div>
         </div>
     </div>
-
+    {% endfor %}
 <div class="post-activity">
     <h1>Have your say!</h1>
         {% if user.is_authenticated %}
@@ -23,11 +24,13 @@
     <div class="col-md-4 col-md-offset-4">
         <form action= "" method = "post">
             {% csrf_token %}
-            {{ form }}
+            {{ get_activity }}
+            
             <input type="submit" value="Submit">
         </form>
     </div>
 </body>
 
 </html>
-{% endblock %}
+
+{% endblock content %}

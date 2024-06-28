@@ -9,6 +9,8 @@ class ActivityForm(models.Model):
     game_ideas = models.CharField(max_length=700, blank=True)
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+   
 
     def __str__(self):
-        return f"{self.game_ideas} | written by {self.name}"
+        return f"ActivityForm {self.game_ideas} by {self.name}"

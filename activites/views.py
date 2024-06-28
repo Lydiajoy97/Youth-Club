@@ -1,19 +1,13 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
-from .forms import HaveYourSayForm
+from django.views import generic
 from .models import ActivityForm
 
 class ActivityFormList(generic.ListView):
-    model = ActivityForm
+    queryset = ActivityForm.objects.filter(status=1)
+    template_name = "activityform_list.html"
+    paginate_by = 6
 
-def get_activity(request):
-
-    form = HaveYourSayForm()
-    if request.method == "POST":
-       form = ActivityForm(request.POST)
-       if form.is_valid():
-        form.save()
-        return redirect ('/')
-        
-    context = {'form' : form}
-    return render(request, "activityform_list.html", context)
+def activites_detail(request, slug):
+    queryset = ActivityForm.objects.filter(status=1)
+    activity = get_object_or_404(queryset, slug=slug)
+    return render(request, "activityform_list.html", {"activity": activity},)

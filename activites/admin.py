@@ -4,4 +4,4 @@ from .models import ActivityForm
 # Register your models here.
 @admin.register(ActivityForm)
 class ActivityFormAdmin(admin.ModelAdmin):
-    pass 
+    list_display = ('name', 'status', 'game_ideas')
