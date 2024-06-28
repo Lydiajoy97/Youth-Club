@@ -1,8 +1,6 @@
 from django import forms
-from django.forms import ModelForm
-from .models import ActivityForm
 
-class HaveYourSayForm(ModelForm):
-    class Meta:
-        model = ActivityForm
-        fields = '__all__'
+class HaveYourSayForm(forms.Form):
+    name = forms.CharField(max_length=200)
+    email = forms.EmailField(max_length=254)
+    game_ideas = forms.CharField(max_length=700)
