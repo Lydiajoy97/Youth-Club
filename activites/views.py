@@ -11,6 +11,6 @@ class ActivityFormList(generic.ListView):
 # From youtube 
 class HaveYourSay(generic.CreateView):
     form_class = HaveYourSayForm 
-    template_name = "addactivity.html"
+    template_name = "activites/addactivity.html"
     success_url = '/'
     success_message = "Your suggestion has been submitted and is awaiting approval."
