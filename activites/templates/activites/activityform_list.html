@@ -13,9 +13,12 @@
     <div class="container mt-5">
         <div class="row">
             <div>
-                <span class="activityform-comment">{{ activityform.name }} </span><br>
-                <span class="activityform-comment">{{ activityform.created_on }} </span><br>
-                <span class="activityform-comment">{{ activityform.game_ideas }}</span>
+                <span class="activityform-suggestion">{{ activityform.name }} </span><br>
+                <span class="activityform-suggestion">{{ activityform.created_on }} </span><br>
+                <span class="activityform-suggestion">{{ activityform.game_ideas }}</span>
+                {% if user.is_authenticated and activityform.author == user %}
+                <button class="btn btn-edit" suggestion_id="{{ suggestion.id }}">Edit</button>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -25,3 +28,7 @@
 </html>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/suggestion.js' %}"></script>
+{% endblock %}
