@@ -15,10 +15,13 @@
             <div>
                 <span class="activityform-suggestion">{{ activityform.name }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.created_on }} </span><br>
-                <span class="activityform-suggestion">{{ activityform.game_ideas }}</span>
-                {% if user.is_authenticated and activityform.author == user %}
-                <button class="btn btn-edit" suggestion_id="{{ suggestion.id }}">Edit</button>
-                {% endif %}
+                <span class="activityform-suggestion">{{ activityform.game_ideas }} 
+                    <br>
+                    {% if user.is_authenticated and 
+                        if user.id == addactivity.author.id %}
+                    <button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="btn-delete"> <i class="fa-solid fa-eraser"></i></button> </span>
+                  </div>
             </div>
         </div>
     </div>
@@ -30,5 +33,5 @@
 {% endblock content %}
 
 {% block extras %}
-<script src="{% static 'js/suggestion.js' %}"></script>
+<script src="{% static 'js/activity.js' %}"></script>
 {% endblock %}

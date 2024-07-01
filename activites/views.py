@@ -16,20 +16,41 @@ class HaveYourSay(generic.CreateView):
     success_url = '/'
     success_message = "Your suggestion has been submitted and is awaiting approval."
 
-def suggestion_edit(request, slug):
-    if request.method == "POST":
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        suggestion = get_object_or_404(ActivityForm, pk=activity_id)
-        activity_form = ActivityForm(data=request.POST, instance=comment)
+def activity_detail(request, slug):
 
-        if activity_form.is_valid() and suggestion.author == request.user:
-            suggestion = activity_form.save(commit=False)
-            suggestion.post = post
-            suggestion.approved = False
-            suggestion.save()
+    queryset = ActivityForm.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    activity = post.activity.all().order_by("-created_on")
+    activity_count = post.activitys.filter(approved=True).count()
+    if request.method == "POST":
+        activity_form = ActivityForm(data=request.POST)
+        if activity_form.is_valid():
+            activity = activity_form.save(commit=False)
+            activity.name = request.user
+            activity.post = post
+            activity.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Suggestion submitted and awaiting approval'
+            )
+
+    activity_form = ActivityForm()
+
+
+def activity_edit(request, slug):
+    if request.method == "POST":
+        queryset = ActivityForm.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        activity = get_object_or_404(ActivityForm, pk=activity_id)
+        activity_form = ActivityForm(data=request.POST, instance=activity)
+
+        if activity_form.is_valid() and activity.name == request.user:
+            activity = activity_form.save(commit=False)
+            activity.post = post
+            activity.approved = False
+            activity.save()
             messages.add_message(request, messages.SUCCESS, 'Your suggestion has been Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating your suggestion!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('addactivity', args=[slug]))

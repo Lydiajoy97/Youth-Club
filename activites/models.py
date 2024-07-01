@@ -10,6 +10,9 @@ class ActivityForm(models.Model):
     approved = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="activity_forms", default=False
+    )
     
     class Meta:
         ordering = ["created_on"]
