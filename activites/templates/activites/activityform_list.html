@@ -15,8 +15,7 @@
             <div>
                 <span class="activityform-suggestion">{{ activityform.first_name }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br>
-                <span class="activityform-suggestion">{{ activityform.game_ideas }} 
-                    <br>
+                <span class="activityform-suggestion">{{ activityform.game_ideas }} </span><br>
                     {% if user.is_authenticated and 
                         if user == addactivity.author.id %}
                     <button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>

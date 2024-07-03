@@ -20,4 +20,4 @@ class ActivityForm(models.Model):
         ordering = ["updated_on"]
 
     def __str__(self):
-        return f"ActivityForm {self.game_ideas} by {self.name}"
+        return f"ActivityForm {self.game_ideas} by {self.first_name}"
