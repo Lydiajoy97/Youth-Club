@@ -13,12 +13,12 @@
     <div class="container mt-5">
         <div class="row">
             <div>
-                <span class="activityform-suggestion">{{ activityform.name }} </span><br>
-                <span class="activityform-suggestion">{{ activityform.created_on }} </span><br>
+                <span class="activityform-suggestion">{{ activityform.username }} </span><br>
+                <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.game_ideas }} 
                     <br>
                     {% if user.is_authenticated and 
-                        if user.id == addactivity.author.id %}
+                        if user == addactivity.author.id %}
                     <button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
                     <button class="btn-delete"> <i class="fa-solid fa-eraser"></i></button> </span>
                   </div>
