@@ -7,7 +7,7 @@ const submitButton = document.getElementById("submitButton");
 
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
-    let activityId = e.target.getAttribute("activiyty_id");
+    let activityId = e.target.getAttribute("activity_id");
     let activityContent = document.getElementById(`activity${activityId}`).innerText;
     activityText.value = activityContent;
     submitButton.innerText = "Update";
