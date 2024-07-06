@@ -15,32 +15,44 @@ Live depolyed site: https://8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpo
 * [**Acknowledgements** ](#Acknowledgements)
 
 # Project Brief
-This is a website where parents or guardians can register there child to the youth club or make enquires using the webistes messaging service.
+This is a website where parents or guardians can register there child to the youth club and youth or parents can suggest activites for the Youth Hub. 
 
 # User Stories
 1. As a user I would like to find out more about the youth club and register my child. 
-2. As a user I want to be able to upload and delete form information to register my child to the youth group. 
-3. As an administrator I want to be able to manage users.
+2. As a user I want to be able to suggest an activity for the youth club.
+3. As a user I want to be able to edit and delete my suggested activity incase I need to.
+4. As an administrator I want to be able to manage users, delete and edit posts and approve all posts.
 
 # Features
 Each custom model should have the CRUD functionality. I have detailed each models functionality below.
-1. CRUD Functionality of the registration model:
-Create- To be able to register your child to the youth club. 
-Read- To be able to see your information uploaded once you have logged in. This needs to be secure to each user as it is personal date.
-Update- To be able to update your information were applicable.
-Delete- To be able to delete any information that no longer applies to your child or their application.
+1. CRUD Functionality of the activites model:
+Create- To be able to suggest an activity 
+Read- To be able to see your post on the activites list page and read other users posts.
+Update- To be able to update the suggested activity post if the correct user is logged in.
+Delete- To be able to delete and the post if the correct user is logged in.
 
 2. Other features:
-- A log in page for users so that their information is secure.
+- A log in page 
+- A log out page 
+- A sign up page
+- A read-only about page 
+- A upload form page 
+- A home page
+- A form to suggest activity 
+- A page to read the activities posted by a user
+- User authentication
+- Update & Delete functions if the user is authenticated
 - Navagation links to each page for best user experience.
 
-![responsive](static/images/site.png)
+![responsive]()
 
 # Surface Plan
 ![responsive](static/images/plan.png)
 
 # Testing
 To test my project I will try and create an account and register a child using the form upload page. 
+I will also test creating an account, logging in and out and that the logged in username is displayed. 
+I will also test the ability to post an activity and edit and delete it as well as reading other posts.
 I have created a testing table which you can view below. 
 
 # Summary
@@ -48,11 +60,8 @@ The navagation links all work well and go to the correct pages. When you log in 
 
 One error that I ran into was during migrations. I wanted to update my model after an inital migration. To fix this I had to delete the migration files and run migrations again.
 
-Another error that I found was getting the form model to display on the html page. 
 Another error that I ran into whilst trying to solve this one was an attritute error. After following the paths I realised the attribute error came from the URL path. Once I changed this to match the view name it was fixed. 
 I also realised that my form was still not being displayed. This was because I was trying to pull the models as a list from the database instead of creating a form. To fix this I created a form.py file and created the class based view to pull that. My form now displays correctly and users can submit. 
-
-When trying to add the Edit and Delete fuctionalities I ran into errors. I started by following the tutorials credited, but then my url path broke. This remains un-fixed and I have been unsucessful in creating a site with full CRUD funtionalities. 
 
 # Testing Results
 
@@ -147,7 +156,7 @@ https://www.youtube.com/watch?v=4vi42R4B-OQ
 
 
 # Contents
-Chat GBT was used to right the contents on the home page. 
+Chat GBT was used to right the contents on the about page. 
 
 The hero image is my own image taken at a previous workplace.
 
