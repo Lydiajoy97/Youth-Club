@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<!-- Edit an activity -->
+<div class="col-md-4 card mb-4 mt-3">
+    <div class="card-body">
+      {% if user.is_authenticated %}
+      <h3>Edit your suggestion</h3><br>
+            <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            {{ form }}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Save</button>
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+</html>
+
+{% endblock content %}

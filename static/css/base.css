@@ -17,6 +17,7 @@ body {
     height: 500px;
 }
 
+/* log in page */
 /* from walkthrough */
 
 .post-link {
@@ -26,11 +27,11 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #7d64b8;
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #7e6ebf;
     color: #fff;
 }
 
@@ -41,12 +42,12 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: #4b5791;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #9ebbdb;
     text-decoration: underline;
 }

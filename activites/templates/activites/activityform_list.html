@@ -17,7 +17,7 @@
                 <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.game_ideas }} </span><br>
                     {% if user.is_authenticated and user == activityform.author %}
-                    <button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <a href="{% url 'editactivity' activityform.pk %}" button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
                     <button class="btn-delete"> <i class="fa-solid fa-eraser"></i></button> </span>
                   </div>
             </div>
@@ -28,7 +28,3 @@
 </body>
 {% endblock content %}
 </html>
-
-{% block extras %}
-<script src="{% static 'js/activity.js' %}"></script>
-{% endblock %}
