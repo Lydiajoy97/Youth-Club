@@ -3,16 +3,20 @@
 {% block content %}
 
 <h1>Register your child</h1>
-{% if user.is_authenticated %}
-<p class="text-end m-3">You are logged in as {{ user }}</p>
-{% else %}
-<p class="text-end m-3">You are not logged in</p>
-{% endif %}
-<!--Geeks for geeks.org-->
-<div class="col-md-4 col-md-offset-4">
-<form action= "" method = "post">
-    {% csrf_token %}
-    {{form.as_table }}
-    <input type="submit" value="Submit">
-</form></div>
-{% endblock %}
+<div class="col-md-4 card mb-4 mt-3">
+    <div class="card-body">
+       {% if user.is_authenticated %}
+       <p class="text-end m-3">You are logged in as {{ user }}</p>
+       {% else %}
+       <p class="text-end m-3">You are not logged in</p>
+       {% endif %}
+       <!--Geeks for geeks.org-->
+            <div class="col-md-4 col-md-offset-4">
+                <form action= "" method = "post">
+                {% csrf_token %}
+                {{form.as_table }}
+                <input type="submit" value="Submit">
+            </form></div>
+        {% endblock %}
+    </div>
+</div>

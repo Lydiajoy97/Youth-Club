@@ -10,22 +10,21 @@
         {% endif %}
     <h1> Your ideas...</h1>
     {% for activityform in activityform_list %}
-    <div class="container mt-5">
-        <div class="row">
+    <div class="col-md-4 card mb-4 mt-3">
+        <div class="card-body">
             <div>
                 <span class="activityform-suggestion">{{ activityform.first_name }} </span><br/>
                 <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br/>
                 <span class="activityform-suggestion">{{ activityform.game_ideas }} </span><br/>
                     {% if user.is_authenticated and user == activityform.author %}
                     <a href="{% url 'editactivity' activityform.pk %}" button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button></a>
-                        <br/>
                     <a href="{% url 'deleteactivity' activityform.pk %}" button class="btn-delete"><i class="fa-solid fa-eraser"></i></button></a>
                   </div>
             </div>
         </div>
     </div>
     {% endif %}
-    {% endfor %}
+{% endfor %}
 </body>
 {% endblock content %}
 </html>
