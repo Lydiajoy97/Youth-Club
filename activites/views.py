@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from .models import ActivityForm
 from .forms import HaveYourSayForm
 from django.http import HttpResponseRedirect
@@ -64,3 +64,10 @@ class UpdatePostView(UpdateView):
     template_name = 'activites/editactivity.html'
     fields = ['game_ideas', 'first_name',]
     success_url = '/'
+    success_message = "Your suggestion has been edited!"
+
+class DeletePostView(DeleteView):
+    model = ActivityForm
+    template_name = 'activites/deleteactivity.html'
+    success_url = '/'
+    success_message = "Your form has been deleted successfully."

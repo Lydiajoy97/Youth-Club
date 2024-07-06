@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<html>
+<!-- Edit an activity -->
+<div class="col-md-4 card mb-4 mt-3">
+    <div class="card-body">
+      <h1> Delete your form... </h1>
+      {% if user.is_authenticated %}
+      <h3>Are you sure you want to delete?</h3><br>
+            <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            <button id="submitButton" class="btn btn-signup btn-lg">Delete</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+</html>
+
+{% endblock content %}
