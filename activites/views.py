@@ -61,5 +61,6 @@ def activity_detail(request, slug):
 
 class UpdatePostView(UpdateView):
     model = ActivityForm
-    template_name = 'editactivity.html'
+    template_name = 'activites/editactivity.html'
     fields = ['game_ideas', 'first_name',]
+    success_url = '/'
