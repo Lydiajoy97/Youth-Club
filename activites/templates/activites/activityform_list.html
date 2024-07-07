@@ -10,7 +10,7 @@
         {% endif %}
     <h1> Your ideas...</h1>
     {% for activityform in activityform_list %}
-    <div class="col-md-4 card mb-4 mt-3">
+    <!-- <div class="col-md-4 card mb-4 mt-3"> -->
         <div class="card-body">
             <div>
                 <span class="activityform-suggestion">{{ activityform.first_name }} </span><br/>
@@ -22,7 +22,7 @@
                   </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     {% endif %}
 {% endfor %}
 </body>
