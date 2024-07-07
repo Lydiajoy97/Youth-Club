@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, UpdateView, CreateView, D
 from .models import ActivityForm
 from .forms import HaveYourSayForm
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 class ActivityFormList(ListView):
     queryset = ActivityForm.objects.filter(status=1)
@@ -18,7 +19,9 @@ class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
     success_url = '/'
-    success_message = "Your suggestion has been submitted and is awaiting approval."
+    def my_view(request):
+        if ActivityForm.is_valid():
+            messages.success(request, 'Form submission successful')
 
 def activity_detail(request, slug):
 
