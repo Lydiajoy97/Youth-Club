@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.views.generic import TemplateView
 from .forms import ChildrensForm
 from .models import UploadForm
 
@@ -14,11 +15,13 @@ def upload_view(request):
 
     form = ChildrensForm()
     if request.method == "POST":
-       # print("printing POST:", request.POST)
        form = ChildrensForm(request.POST)
-       if form.is_valid():
+    if form.is_valid():
         form.save()
-        return redirect ('/')
-        
+        return redirect ('/form/post/redirect.html')
+
     context = {'form' : form}
     return render(request, "form.html", context)
+
+class RedirectView(TemplateView):
+    template_name = "redirect.html"

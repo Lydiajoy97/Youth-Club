@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import ListView, UpdateView, CreateView, DeleteView
+from django.views.generic import ListView, UpdateView, CreateView, DeleteView, TemplateView
 from .models import ActivityForm
 from .forms import HaveYourSayForm
 from django.http import HttpResponseRedirect
@@ -11,13 +11,13 @@ class ActivityFormList(ListView):
     paginate_by = 6
 
 # From youtube 
+class RedirectView(TemplateView):
+    template_name = "redirect.html"
+
 class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
-    success_url = '/'
-    def my_view(request):
-        if ActivityForm.is_valid():
-            messages.success(request, 'Form submission successful')
+    success_url = '/redirect2.html'
 
 class UpdatePostView(UpdateView):
     model = ActivityForm
