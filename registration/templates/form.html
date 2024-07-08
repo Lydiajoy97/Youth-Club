@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Register your child</h1>
-<div class="col-md-4 card mb-4 mt-3">
+<div class="col-6">
     <div class="card-body">
        {% if user.is_authenticated %}
        <p class="text-end m-3">You are logged in as {{ user }}</p>
@@ -11,7 +11,7 @@
        <p class="text-end m-3">You are not logged in</p>
        {% endif %}
        <!--Geeks for geeks.org-->
-            <div class="col-6 col-sm-4">
+            <div class="col-2">
                 <form action= "post" method = "post">
                 {% csrf_token %}
                 {{form.as_table }}
