@@ -12,12 +12,12 @@ class ActivityFormList(ListView):
 
 # From youtube 
 class RedirectView(TemplateView):
-    template_name = "redirect.html"
+    template_name = "redirect2.html/"
 
 class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
-    success_url = '/redirect2.html'
+    success_url = "redirect2.html/"
 
 class UpdatePostView(UpdateView):
     model = ActivityForm
