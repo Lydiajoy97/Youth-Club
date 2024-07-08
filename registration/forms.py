@@ -7,3 +7,4 @@ class ChildrensForm(ModelForm):
     class Meta:
         model = UploadForm
         fields = '__all__'
+        exclude = 'status', 'consent_letter'
