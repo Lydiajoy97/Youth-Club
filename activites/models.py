@@ -6,7 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class ActivityForm(models.Model):
-    first_name = models.CharField(max_length=200, default="id")
+    first_name = models.CharField(max_length=200, default="Pick a display name")
     email = models.EmailField(max_length=254)
     game_ideas = models.TextField()
     approved_by = models.BooleanField(default=False)

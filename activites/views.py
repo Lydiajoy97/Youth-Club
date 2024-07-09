@@ -8,7 +8,7 @@ from django.contrib import messages
 class ActivityFormList(ListView):
     queryset = ActivityForm.objects.filter(status=1)
     template_name = "activityform_list.html"
-    paginate_by = 6
+    paginate_by = 9
 
 # From youtube 
 class RedirectView(TemplateView):
@@ -17,9 +17,10 @@ class RedirectView(TemplateView):
 class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
     success_url = "redirect2.html/"
-    def __str__(self):
-        return self.author
 
 class UpdatePostView(UpdateView):
     model = ActivityForm
