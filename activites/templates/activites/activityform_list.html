@@ -8,8 +8,8 @@
                 {% else %}
             <p class="text-end m-3">You are not logged in</p>
         {% endif %}
-    <h1> Your ideas...</h1>
-    {% for activityform in activityform_list %}
+        <h1> Your ideas...</h1>
+        {% for activityform in activityform_list %}
         <div class="card-body">
             <div>
                 <br>{% if user.is_authenticated and user == activityform.author %}
@@ -21,7 +21,8 @@
                 <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br>
             </div>
         </div>
-{% endfor %}
+    </div>
+    {% endfor %}
 </body>
 {% endblock content %}
 
