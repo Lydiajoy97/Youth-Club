@@ -6,7 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # checkbox field source in credits
 # Create your models here.
 class UploadForm(models.Model):
-    full_name = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=200)
     email = models.EmailField(max_length=254)
     age = models.CharField(max_length=20, default=10)
     group_attending = models.CharField(max_length=200, default="The Hub")
