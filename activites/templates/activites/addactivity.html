@@ -1,29 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-  <html>
   <h3>
     Have your say...
   </h3><br>
-    <p>Let us know some game ideas!</p><!-- Create a new activity -->
-      <div class="col-1">
-        <div class="card-body">
+  <p>Let us know some game ideas!
+  </p><!-- Create a new activity -->
+  <div class="col-1">
+    <div class="card-body">
+      {% if user.is_authenticated %}
+        <form method="post" style="margin-top: 1.3em;">
+          {% csrf_token %}
+          {{ form }}
           {% if user.is_authenticated %}
-            <form method="post" style="margin-top: 1.3em;">
-              {% csrf_token %}
-                {{ form }}
-                  {% if user.is_authenticated %}
-                      <button id="submitButton" type="submit" class="btn btn-signup btn-lg"> Send </button>
-                    {% if user.id == post.author.id %}
-                    {% endif %}
-                  {% endif %}
-            </form>
-          {% else %}
-          <p>
-            You must log in to have your say!
-          </p>
-        {% endif %}
-      </div>
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg"> Send </button>
+          {% if user.id == post.author.id %}
+          {% endif %}
+          {% endif %}
+        </form>
+        {% else %}
+        <p>
+          You must log in to have your say!
+        </p>
+      {% endif %}
     </div>
-  </html>
+  </div>
 {% endblock content %}
