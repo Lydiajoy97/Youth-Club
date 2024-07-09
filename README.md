@@ -73,6 +73,10 @@ https://docs.google.com/document/d/1mBo_uNo2pwG0C7uNdOIpEvz9kHZVioFogS3kHh2kR0U/
 Views:
 https://www.youtube.com/watch?v=CnaB4Nb0-R8 
 
+fix author field activites page: 
+Youtube comments:
+https://www.youtube.com/watch?v=TAH01Iy5AuE 
+
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 
 https://chat.openai.com/c/cbe930a4-4488-499c-bf87-af5dfda6ba9b
