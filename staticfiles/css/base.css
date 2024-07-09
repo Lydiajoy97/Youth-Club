@@ -58,6 +58,8 @@ form {
     color: #23BBBB;
 }
 
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
 @media screen and (max-width: 900px) {
     img {
         justify-content: center;

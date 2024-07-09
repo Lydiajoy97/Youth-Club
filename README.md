@@ -1,6 +1,6 @@
 ## Project Name : The Youth Hub
 
-Live depolyed site: https://8000-lydiajoy97-youthclub-xju7f59om9x.ws-eu108.gitpod.io/
+Live depolyed site: https://the-youth-hub-ec62a9619d45.herokuapp.com/
 
 # **TABLE OF Contents**
 
@@ -44,19 +44,33 @@ Delete- To be able to delete and the post if the correct user is logged in.
 - Update & Delete functions if the user is authenticated
 - Navagation links to each page for best user experience.
 
-![responsive]()
 
 # Surface Plan
-![responsive](static/images/plan.png)
+![plan](staticfiles/images/pageflow.png)
+
+After the inital plan I realised that the upload form alone would not contain the full crud functionality like update and delete. I therefore decided to add the activities suggestion app where a user can post, update and delete.
+
+My form models are as follows. 
+
+![model](staticfiles/images/formplan.png)
+![model](staticfiles/images/modelplan.png)
+
+These are my project wireframes. 
+
+![wireframe](staticfiles/images/wireframehome.png)
+![wireframe](staticfiles/images/formwireframe.png)
+![wireframe](staticfiles/images/activiteswireframe.png)
 
 # Testing
 To test my project I will try and create an account and register a child using the form upload page. 
 I will also test creating an account, logging in and out and that the logged in username is displayed. 
 I will also test the ability to post an activity and edit and delete it as well as reading other posts.
+My friends and family have also tested creating an account and uploading forms.
+
 I have created a testing table which you can view below. 
 
 # Summary
-The navagation links all work well and go to the correct pages. When you log in you are redirected to the form page which is correct. 
+The navigation links all work well and go to the correct pages. When you log in you are redirected to the form page which is correct. 
 
 One error that I ran into was during migrations. I wanted to update my model after an inital migration. To fix this I had to delete the migration files and run migrations again.
 
@@ -69,12 +83,28 @@ To veiw my testing table please follow this link.
 
 https://docs.google.com/document/d/1mBo_uNo2pwG0C7uNdOIpEvz9kHZVioFogS3kHh2kR0U/edit?usp=sharing
 
+I struggled throughout the project to fix the footer to the bottom of the page without it covering up text.
+To solve this I added page padding to the bottom of the body so that it leaves room between the footer and content. 
+This now works and my footer is not covering anything. 
+
+Also my image is slightly streached on large screens. It's responsive, but doesn't look good to the user. 
+
+Another error that a user ran into was that they could not upload the form from Android firefox. They tried again after some time and it worked. I had fixed some indentation issues which may have helped resolve this.
+
+My project passed through the w3 validator on all but two pages. On the form/post page it showed a stray start tag error. I was unable to locate this, so the bug remains.
+Also on the /activities page it shows stray divs which I am unable to locate and fix.
+
+![validator](staticfiles/images/validator.png)
+
 # Credits
-Views:
+
+Building blog for Activities app:
 https://www.youtube.com/watch?v=CnaB4Nb0-R8 
 
+https://www.youtube.com/watch?v=mpfHDSmqHds
+
 fix author field activites page: 
-Youtube comments:
+Code Youtube comments by user nishanthmuruganantham3590:
 https://www.youtube.com/watch?v=TAH01Iy5AuE 
 
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
@@ -82,6 +112,13 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 https://chat.openai.com/c/cbe930a4-4488-499c-bf87-af5dfda6ba9b
 
 https://docs.djangoproject.com/en/5.0/intro/tutorial03/
+
+Media queries:
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+responsive grid:
+https://www.youtube.com/watch?v=68O6eOGAGqA 
 
 Form writing:
 
@@ -160,15 +197,16 @@ https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/
 
 https://www.youtube.com/watch?v=4vi42R4B-OQ 
 
-
 # Contents
 Chat GBT was used to right the contents on the about page. 
-
 The hero image is my own image taken at a previous workplace.
 
 # Deployment
-To deploy to heroku I set up the app on the dashboard. 
-I then clicked deploy to the main branch and opened the app.
+To deploy to heroku set debug to false and pushed my commits. 
+Earlier on in the projected I connected my project to heroku by connecting the github. As my IDE changed to code institute-ide I had to redo this set and reconfigure my database url. 
+Then I removed the disable collect static setting and deployed my branch. 
+I made sure that automatic deploys where swictch on so that every push I commit updates the live site.
+My app is now deployed.
 
 # Acknowledgemnts
 
