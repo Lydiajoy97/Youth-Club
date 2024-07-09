@@ -15,7 +15,7 @@
                 <form action= "post" method = "post">
                 {% csrf_token %}
                 {{form.as_table }}
-                <input type="submit" value="Submit">
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg"> Send </button>
             </form></div>
         {% endblock %}
     </div>

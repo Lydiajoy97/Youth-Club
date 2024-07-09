@@ -70,6 +70,8 @@ To veiw my testing table please follow this link.
 https://docs.google.com/document/d/1mBo_uNo2pwG0C7uNdOIpEvz9kHZVioFogS3kHh2kR0U/edit?usp=sharing
 
 # Credits
+Views:
+https://www.youtube.com/watch?v=CnaB4Nb0-R8 
 
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 

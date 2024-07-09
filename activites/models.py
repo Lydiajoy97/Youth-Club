@@ -13,7 +13,7 @@ class ActivityForm(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="addactivity"
+        User, on_delete=models.CASCADE, related_name="addactivity",
     )
     
     class Meta:

@@ -18,12 +18,14 @@ class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
     success_url = "redirect2.html/"
+    def __str__(self):
+        return self.author
 
 class UpdatePostView(UpdateView):
     model = ActivityForm
     template_name = 'activites/editactivity.html'
-    fields = ['game_ideas', 'first_name',]
-    success_url = '/'
+    fields = ['game_ideas', 'first_name']
+    success_url = "redirect2.html/"
     success_message = "Your suggestion has been edited!"
 
 class DeletePostView(DeleteView):
