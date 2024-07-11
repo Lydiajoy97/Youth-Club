@@ -74,7 +74,7 @@ The navigation links all work well and go to the correct pages. When you log in 
 
 One error that I ran into was during migrations. I wanted to update my model after an inital migration. To fix this I had to delete the migration files and run migrations again.
 
-Another error that I ran into whilst trying to solve this one was an attritute error. After following the paths I realised the attribute error came from the URL path. Once I changed this to match the view name it was fixed. 
+Another error that I ran into whilst trying to solve this one was an attribute error. After following the paths I realised the attribute error came from the URL path. Once I changed this to match the view name it was fixed. 
 I also realised that my form was still not being displayed. This was because I was trying to pull the models as a list from the database instead of creating a form. To fix this I created a form.py file and created the class based view to pull that. My form now displays correctly and users can submit. 
 
 # Testing Results
@@ -98,13 +98,23 @@ Also on the /activities page it shows stray divs which I am unable to locate and
 
 # Credits
 
-Building blog for Activities app:
+Building blog for Activities app by code.any:
 https://www.youtube.com/watch?v=CnaB4Nb0-R8 
 
 https://www.youtube.com/watch?v=mpfHDSmqHds
 
+Edit and Delete features by Code.any:
+
+https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6
+
+https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7
+
+Other Code.any video:
+
+https://www.youtube.com/watch?v=Y1Us5jVT07E&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=16
+
 fix author field activites page: 
-Code Youtube comments by user nishanthmuruganantham3590:
+Code used from Youtube comments by user nishanthmuruganantham3590:
 https://www.youtube.com/watch?v=TAH01Iy5AuE 
 
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
@@ -199,7 +209,7 @@ https://www.youtube.com/watch?v=4vi42R4B-OQ
 
 # Contents
 Chat GBT was used to right the contents on the about page. 
-The hero image is my own image taken at a previous workplace.
+The hero image on the home page is my own image taken at a previous workplace.
 
 # Deployment
 To deploy to heroku set debug to false and pushed my commits. 
