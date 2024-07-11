@@ -5,12 +5,13 @@ from .forms import HaveYourSayForm
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 
+# Class views from code.any youtube tutorials
+
 class ActivityFormList(ListView):
     queryset = ActivityForm.objects.filter(status=1)
     template_name = "activityform_list.html"
     paginate_by = 9
 
-# From youtube 
 class RedirectView(TemplateView):
     template_name = "redirect2.html/"
 

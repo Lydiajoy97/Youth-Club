@@ -2,6 +2,8 @@ from . import views
 from django.urls import path
 from .views import UpdatePostView, DeletePostView, TemplateView
 
+# URL Paths built using code.any youtube tutorials
+
 urlpatterns = [
     path('', views.ActivityFormList.as_view(), name='activityform'),
     path('addactivity/', views.HaveYourSay.as_view(), name='addactivity'),
