@@ -16,6 +16,7 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,11 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-lydiajoy97-youthclub-md5pq2f0pe8.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-lydiajoy97-youthclub-8r89mgqn0vd.ws.codeinstitute-ide.net',
 '.herokuapp.com',]
 
 
@@ -124,7 +125,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-lydiajoy97-youthclub-md5pq2f0pe8.ws.codeinstitute-ide.net",
+    "https://8000-lydiajoy97-youthclub-8r89mgqn0vd.ws.codeinstitute-ide.net",
     "https://youth-club-b2219f74ddfa.herokuapp.com/"
 ]
 
