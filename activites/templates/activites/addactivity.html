@@ -15,7 +15,7 @@
           {{ form }}
           {% if user.is_authenticated %}
           <button id="submitButton" type="submit" class="btn btn-signup btn-lg"> Send </button>
-          {% if user.id == post.author.id %}
+          {% if user == post.author %}
           {% endif %}
           {% endif %}
         </form>
