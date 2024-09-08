@@ -13,7 +13,7 @@ class ActivityFormList(ListView):
     paginate_by = 9
 
 class RedirectView(TemplateView):
-    template_name = "redirect2.html/"
+    template_name = "redirect2.html"
 
 class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
@@ -26,8 +26,8 @@ class HaveYourSay(CreateView):
 class UpdatePostView(UpdateView):
     model = ActivityForm
     template_name = 'activites/editactivity.html'
-    fields = ['game_ideas', 'first_name']
-    success_url = "redirect2.html/"
+    fields = ['game_ideas']
+    success_url = "redirect2.html"
     success_message = "Your suggestion has been edited!"
 
 class DeletePostView(DeleteView):
