@@ -33,5 +33,5 @@ class UpdatePostView(UpdateView):
 class DeletePostView(DeleteView):
     model = ActivityForm
     template_name = 'activites/deleteactivity.html'
-    success_url = '/'
+    success_url = 'deleted.html'
     success_message = "Your form has been deleted successfully."
