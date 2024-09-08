@@ -11,5 +11,5 @@ urlpatterns = [
     path('edit/redirect2.html/', TemplateView.as_view(template_name='redirect.html')),
     path('edit/<int:pk>', UpdatePostView.as_view(), name='editactivity'),
     path('activites/<int:pk>/delete', DeletePostView.as_view(), name='deleteactivity'),
-    path('activites/<int:pk>/deleted.html', TemplateView.as_view(template_name='deleted.html')),
+    path('activites/<int:pk>/deleted.html', TemplateView.as_view(template_name='activites/deleted.html')),
 ]
