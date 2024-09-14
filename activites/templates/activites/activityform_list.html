@@ -16,7 +16,7 @@
                 <a href="{% url 'editactivity' activityform.pk %}" button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button></a>
                 <a href="{% url 'deleteactivity' activityform.pk %}" button class="btn-delete"><i class="fa-solid fa-eraser"></i></button></a>
                 {% endif %}
-                <span class="activityform-suggestion"> Suggested by {{ activityform.first_name }} </span><br>
+                <span class="activityform-suggestion"> Suggested by {{ activityform.author }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.game_ideas }} </span><br>
                 <span class="activityform-suggestion">{{ activityform.updated_on }} </span><br>
             </div>

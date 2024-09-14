@@ -4,4 +4,4 @@ from django import forms
 class HaveYourSayForm(forms.ModelForm):
     class Meta:
         model = ActivityForm
-        exclude = 'status', 'approved_by', 'updated_on', 'email', 'first_name'
+        exclude = 'status', 'approved_by', 'updated_on', 'email', 'author'
