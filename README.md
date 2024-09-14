@@ -207,6 +207,14 @@ https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-display/
 
 https://www.youtube.com/watch?v=4vi42R4B-OQ 
 
+https://stackoverflow.com/questions/25376741/send-custom-message-in-django-permissiondenied
+
+https://www.youtube.com/watch?v=Y1Us5jVT07E
+
+https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#authentication-backends
+
+https://www.reddit.com/r/djangolearning/comments/15tbpiw/django_dont_display_the_id_of_a_foreignkey_but/
+
 # Contents
 Chat GBT was used to right the contents on the about page. 
 The hero image on the home page is my own image taken at a previous workplace.
