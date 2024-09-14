@@ -5,6 +5,8 @@ from .forms import HaveYourSayForm
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin 
+from django.contrib.auth.backends import BaseBackend
+from django.contrib.auth.models import User
 
 
 # Class views from code.any youtube tutorials
@@ -18,13 +20,14 @@ class ActivityFormList(ListView):
 class RedirectView(TemplateView):
     template_name = "redirect2.html"
 
-class HaveYourSay(LoginRequiredMixin, CreateView):
+class HaveYourSay(CreateView):
     form_class = HaveYourSayForm 
     template_name = "activites/addactivity.html"
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
     success_url = "redirect2.html/"
+    
 
 
 class UpdatePostView(LoginRequiredMixin, UpdateView): 
@@ -33,9 +36,6 @@ class UpdatePostView(LoginRequiredMixin, UpdateView):
     fields = ['game_ideas']
     success_url = "redirect2.html"
     success_message = "Your suggestion has been edited!"
-    def edit_posts(request, pk=None):
-        obj = get_object_or_404(YourModel, pk=pk, user=request.user)
-        return  render(request, 'activity.html',)
     
 
 class DeletePostView(LoginRequiredMixin, DeleteView):
