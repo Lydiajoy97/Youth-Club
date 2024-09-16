@@ -8,13 +8,15 @@
                 {% else %}
             <p class="text-end m-3">You are not logged in</p>
         {% endif %}
-        <h1> Your ideas...</h1>
-            {% for activityform in activityform_list %}
-                <div class="card-body">
-                    {% if user.is_authenticated and user == activityform.author %}
-                        <a href="{% url 'editactivity' activityform.pk %}" button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button></a>
-                        <a href="{% url 'deleteactivity' activityform.pk %}" button class="btn-delete"><i class="fa-solid fa-eraser"></i></button></a>
-                    {% endif %}
+        <h1> 
+            Your ideas...
+        </h1>
+        {% for activityform in activityform_list %}
+            <div class="card-body">
+                {% if user.is_authenticated and user == activityform.author %}
+                    <a href="{% url 'editactivity' activityform.pk %}" button class="btn btn-edit"><i class="fa-regular fa-pen-to-square"></i></button></a>
+                    <a href="{% url 'deleteactivity' activityform.pk %}" button class="btn-delete"><i class="fa-solid fa-eraser"></i></button></a>
+                {% endif %}
                 <div class="activityform-suggestion"> 
                     Suggested by {{ activityform.author }} 
                 </div>
@@ -26,10 +28,8 @@
                 <div class="activityform-suggestion">
                     {{ activityform.updated_on }} 
                 </div>
-                <br>
             </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 {% endblock content %}
 
