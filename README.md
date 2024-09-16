@@ -79,8 +79,10 @@ I also realised that my form was still not being displayed. This was because I w
 
 # Testing Results
 
-To veiw my testing table please follow this link. 
+![testing](staticfiles/images/testing1.png)
+![testing](staticfiles/images/testing2.png)
 
+To veiw my testing table please follow this link:
 https://docs.google.com/document/d/1mBo_uNo2pwG0C7uNdOIpEvz9kHZVioFogS3kHh2kR0U/edit?usp=sharing
 
 I struggled throughout the project to fix the footer to the bottom of the page without it covering up text.
