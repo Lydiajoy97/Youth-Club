@@ -2,23 +2,21 @@
 {% load static %}
 {% block content %}
   <html>
-    <!-- From the walkthrough videos and code.any youtube tutorials -->
-  <div class="col-md-4 card mb-4 mt-3">
-    <div class="card-body">
-    {% if user.is_authenticated and user == activityform.author %}
-      <h3>Edit your suggestion</h3><br>
-        <form method="post" style="margin-top: 1.3em;">
-          {% csrf_token %}
-          {{ form }}
-          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Save</button>
-        </form>
-      {% else %}
-      <p>Oops... This is not your post...</p>
-    {% endif %}
+      <!-- From the walkthrough videos and code.any youtube tutorials -->
+    <div class="col-md-4 card mb-4 mt-3">
+      <div class="card-body">
+        {% if user.is_authenticated and user == activityform.author %}
+          <h3>Edit your suggestion</h3><br>
+          <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            {{ form }}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Save</button>
+          </form>
+        {% else %}
+          <p>Oops... This is not your post...</p>
+        {% endif %}
+      </div>
     </div>
-  </div>
-  </div>
-  </div>
   </html>
 
 {% endblock content %}
