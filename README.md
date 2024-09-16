@@ -220,10 +220,14 @@ Chat GBT was used to right the contents on the about page.
 The hero image on the home page is my own image taken at a previous workplace.
 
 # Deployment
-To deploy to heroku set debug to false and pushed my commits. 
-Earlier on in the projected I connected my project to heroku by connecting the github. As my IDE changed to code institute-ide I had to redo this set and reconfigure my database url. 
-Then I removed the disable collect static setting and deployed my branch. 
+I first set up an instance on Elphant SQL to get my database url.
+To deploy my project I navigated to heroku and created my app. I then added the DISABLE_COLLECTSTATIC key and ensured my cloundinary url and database url matched. 
+I then installed gunicorn and added it to the requirements.txt file. After this I added a file called Procfile and added the command to execute my project with my project name included.
+I then made sure heroku was an ALLOWED_HOST in my settings.py file. 
+Finally, to deploy to heroku set debug to false and pushed my commits. 
+
 I made sure that automatic deploys where swictch on so that every push I commit updates the live site.
+
 My app is now deployed.
 
 # Acknowledgemnts
