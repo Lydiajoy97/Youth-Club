@@ -93,8 +93,7 @@ Also my image is slightly streached on large screens. It's responsive, but doesn
 
 Another error that a user ran into was that they could not upload the form from Android firefox. They tried again after some time and it worked. I had fixed some indentation issues which may have helped resolve this.
 
-My project passed through the w3 validator on all but two pages. On the form/post page it showed a stray start tag error. I was unable to locate this, so the bug remains.
-Also on the /activities page it shows stray divs which I am unable to locate and fix.
+My project passed through the w3 validator on all the pages.
 
 ![validator](staticfiles/images/validator.png)
 
